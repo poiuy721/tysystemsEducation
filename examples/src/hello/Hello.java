@@ -1,18 +1,27 @@
 package hello;
 
-import java.util.Scanner;
 
 public class Hello {
 
+	static String staticVariable="static variable";
+	String memberVariable="member variable";
+	Hello(){
+		System.out.println("Call constructor");
+	}
+	static void staticMethod(String argument) {
+		System.out.println(argument);
+	}
+	void memberMethod() {
+		String localVariable="local variable";
+		System.out.println(localVariable);
+	}
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Sum s = new Sum();
-
-		int sum = 0;
-		int num = sc.nextInt();
-
-		sum = s.sum(num);
-
-		System.out.println(sum);
+		System.out.println(Hello.staticVariable);
+		Hello.staticMethod("argument");
+		Hello h=new Hello();
+		System.out.println(h.memberVariable);
+		
+		
+		
 	}
 }
