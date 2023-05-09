@@ -3,24 +3,18 @@ package hello;
 
 public class Hello {
 
-	static String staticVariable="static variable";
-	String memberVariable="member variable";
-	Hello(){
-		System.out.println("Call constructor");
-	}
-	static void staticMethod(String argument) {
-		System.out.println(argument);
-	}
-	void memberMethod() {
-		String localVariable="local variable";
-		System.out.println(localVariable);
-	}
+	static int solution(int a, int b) {
+        int answer = 0;
+        if(Integer.parseInt(Integer.toString(a)+Integer.toString(b))>Integer.parseInt(Integer.toString(b)+Integer.toString(a))){
+            answer=Integer.parseInt(Integer.toString(a)+Integer.toString(b));
+    }
+        else
+            answer=Integer.parseInt(Integer.toString(b)+Integer.toString(a));
+        return answer;
+}
 	public static void main(String[] args) {
-		System.out.println(Hello.staticVariable);
-		Hello.staticMethod("argument");
-		Hello h=new Hello();
-		System.out.println(h.memberVariable);
 		
+		System.out.println(solution(19,91));
 		
 		
 	}

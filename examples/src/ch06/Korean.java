@@ -1,9 +1,9 @@
 package ch06;
 
 public class Korean {
-	String nation="Korea";
+	final String nation="Korea";
 	String name;
-	String ssn;
+	final String ssn;
 	
 	public Korean(String name,String ssn) {
 		this.name=name;
