@@ -4,11 +4,14 @@ public class Car {
 	static String company="Hyundai";
 	private int wheel;
 	private int speed;
-	
-	public Car() {
-		System.out.println("Car()");
+	public Car() {}
+	public Car(int wheel) {
+		this.wheel=wheel;
 	}
-	
+	public Car(int wheel,int speed) {
+		this.wheel=wheel;
+		this.speed=speed;
+	}
 	public void setWheel(int wheel) {
 		this.wheel=wheel;
 	}
@@ -20,5 +23,10 @@ public class Car {
 	}
 	public int getSpeed() {
 		return this.speed;
+	}
+	
+	public String toString() {
+		return "====================\n"
+				+ "Car's toString()";
 	}
 }
