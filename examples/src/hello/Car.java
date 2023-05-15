@@ -1,6 +1,7 @@
 package hello;
 
 public class Car {
+	
 	static String company="Hyundai";
 	private int wheel;
 	private int speed;
