@@ -4,44 +4,39 @@ public class Kart {
 	private String name;
 	private String color;
 	private int currentSpeed;
-	private int upSpeed;
-	private int downSpeed;
-	private int maxSpeed;
-	private int boosterSpeed;
+	private static final int UP_SPEED=40;
+	private static final int DOWN_SPEED=80;
+	private static final int MAX_SPEED=150;
+	private static final int BOOSTER_SPEED=100;
 	private int remainedBooster;
-	private int maxBooster;
+	private static final int MAX_BOOSTER=1;
 	
 	
 	public Kart() {}
 	public Kart(String name,String color) {
 		this.name=name;
 		this.color=color;
-		this.upSpeed=40;
-		this.downSpeed=80;
-		this.maxSpeed=150;
-		this.boosterSpeed=100;
-		this.maxBooster=1;
 	}
 	
 	public void printKartInfo() {
 		System.out.println("===Kart Info===");
 		System.out.println("["+this.name+"("+this.color+")]");
-		System.out.println("SpeedUp 증가 속도 : "+upSpeed+"(km)");
-		System.out.println("SpeedDown 감소 속도 : "+downSpeed+"(km)");
-		System.out.println("카트 최대 속도 : "+maxSpeed+"(km)");
-		System.out.println("부스터 사용시 증가 속도 : "+boosterSpeed+"(km)");
-		System.out.println("부스터 최대 개수 : "+maxBooster+"(개)");
+		System.out.println("SpeedUp 증가 속도 : "+UP_SPEED+"(km)");
+		System.out.println("SpeedDown 감소 속도 : "+DOWN_SPEED+"(km)");
+		System.out.println("카트 최대 속도 : "+MAX_SPEED+"(km)");
+		System.out.println("부스터 사용시 증가 속도 : "+BOOSTER_SPEED+"(km)");
+		System.out.println("부스터 최대 개수 : "+MAX_BOOSTER+"(개)");
 	}
 	public void speedUp() {
-		if(currentSpeed+upSpeed<=maxSpeed)
-			currentSpeed+=upSpeed;
-		else currentSpeed=maxSpeed;
+		if(currentSpeed+UP_SPEED<=MAX_SPEED)
+			currentSpeed+=UP_SPEED;
+		else currentSpeed=MAX_SPEED;
 		System.out.println("["+name+"("+color+")] speedUp | 속도 : "+
 		currentSpeed+"(km) | 부스터 : "+remainedBooster+"(개)");
 	}
 	public void speedDown() {
-		if(currentSpeed-downSpeed>=0)
-			currentSpeed-=downSpeed;
+		if(currentSpeed-DOWN_SPEED>=0)
+			currentSpeed-=DOWN_SPEED;
 		else currentSpeed=0;
 		System.out.println("["+name+"("+color+")] speedDown | 속도 : "+
 		currentSpeed+"(km) | 부스터 : "+remainedBooster+"(개)");
@@ -60,9 +55,9 @@ public class Kart {
 	public void useBooster() {
 		if(remainedBooster==1) {
 			remainedBooster--;
-			if(currentSpeed+boosterSpeed<=maxSpeed)
-				currentSpeed+=boosterSpeed;
-			else currentSpeed=maxSpeed;
+			if(currentSpeed+BOOSTER_SPEED<=MAX_SPEED)
+				currentSpeed+=BOOSTER_SPEED;
+			else currentSpeed=MAX_SPEED;
 			System.out.println("["+name+"("+color+")] useBooster | 속도 : "+
 					currentSpeed+"(km) | 부스터 : "+remainedBooster+"(개)");
 		}
