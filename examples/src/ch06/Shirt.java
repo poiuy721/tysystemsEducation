@@ -38,6 +38,24 @@ public class Shirt {
 	public void setSize(String size) {
 		this.size = size;
 	}
+	public String getName() {
+		return name;
+	}
+	public String getColor() {
+		return color;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public String getMaterials() {
+		return materials;
+	}
+	public String getSize() {
+		return size;
+	}
+	public int getPrice() {
+		return price;
+	}
 	public void setPrice(int price) {
 		this.price = price;
 	}
