@@ -12,6 +12,6 @@ public class MainStringArrayArgument {
 		
 		int num1=Integer.parseInt(str1);
 		int num2=Integer.parseInt(str2);
-		System.out.println(num1+num2);
+		System.out.println(num1+"+"+num2+"="+(num1+num2));
 	}
 }

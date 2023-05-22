@@ -2,18 +2,26 @@ package hello;
 
 public class Test {
 	public static void main(String[] args) {
-		int[] numLog= {1,2,3,4,5,6,7,8,9};
-        String answer = "";
-        for(int i=0;i<numLog.length-1;i++){
-            if((numLog[i+i]-numLog[i])==1)
-                answer+="w";
-            else if((numLog[i+i]-numLog[i])==-1)
-                answer+="s";
-            else if((numLog[i+i]-numLog[i])==10)
-                answer+="d";
-            else if((numLog[i+i]-numLog[i])==-10)
-                answer+="a";
+		int[][] queries= {{0,4,2},{0,3,2},{0,2,2}};
+		int[] arr= {0,1,2,4,3};
+        int answerNum=0;
+        int[] answer = new int[queries.length];
+        for(int i=0;i<queries.length;i++){
+            for(int j=queries[i][0];j<=queries[i][1];j++){
+                if(arr[j]>queries[i][2]){
+                	answerNum=arr[j];
+                	System.out.println(answerNum);
+                    if(answerNum>arr[j]) {
+                        answerNum=arr[j];
+                    }
+                }
+                else answerNum=-1;
+            }
+            answer[i]=answerNum;
         }
-        System.out.println(answer);
+        
+        for(int a:answer) {
+        	System.out.println(a);
+        }
 	}
 }
