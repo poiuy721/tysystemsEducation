@@ -1,19 +1,19 @@
 package ch07;
 
+public class Student extends Person {
 
-public class Student extends Person{
+	private String hakbun;
 
-	private String hakbun; // 학번
-
+	// Constructor
 	public Student() {
-		System.out.println("Student()");
 	}
-	public Student(String name,int age,String hakbun) {
-		super(name,age);
-		this.hakbun=hakbun;
-		System.out.println("Student(String,int,String)");
+
+	public Student(String name, int age, String hakbun) {
+		super(name, age);
+		this.hakbun = hakbun;
 	}
-	
+
+	// Method
 	public String getHakbun() {
 		return hakbun;
 	}
@@ -21,9 +21,13 @@ public class Student extends Person{
 	public void setHakbun(String hakbun) {
 		this.hakbun = hakbun;
 	}
-	
+
+	@Override
 	public void printInfo() {
-		System.out.println("Student.printInfo() : 이름 : "+super.getName()+" | 나이 : "+super.getAge()+" | 학번 : "+hakbun);
+		System.out.println("\n===== Student =====");
+		System.out.print("이름=" + getName());
+		System.out.print(" | 나이=" + getAge());
+		System.out.println(" | 학번=" + getHakbun());
 	}
 
 }

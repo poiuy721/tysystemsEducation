@@ -1,8 +1,9 @@
 package ch07;
 
-public class Phone {
+public abstract class Phone {
 	public String model;
 	public String color;
+	String owner;
 	
 	public Phone() {
 		System.out.println("Phone() 생성자 실행");
@@ -11,6 +12,9 @@ public class Phone {
 		this.model=model;
 		this.color=color;
 		System.out.println("Phone(String,String) 생성자 실행");
+	}
+	public Phone(String owner) {
+		this.owner=owner;
 	}
 	
 	public void bell() {
@@ -26,5 +30,11 @@ public class Phone {
 	}
 	public void hangUp() {
 		System.out.println("전화를 끊습니다.");
+	}
+	public void turnOn() {
+		System.out.println("전원을 켭니다");
+	}
+	public void turnOff() {
+		System.out.println("전원을 끕니다");
 	}
 }

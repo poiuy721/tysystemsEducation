@@ -3,26 +3,27 @@ package ch07;
 
 public class Person {
 
-	private String name;// 이름
-	private int age; // 나이
-	
+	private String name;
+	private int age;
+
+	// Constructor
 	public Person() {
-		System.out.println("Person()");
 	}
+
 	public Person(String name) {
-		this.name=name;
-		System.out.println("Person(String)");
+		this.name = name;
 	}
+
 	public Person(int age) {
-		this.age=age;
-		System.out.println("Person(int)");
+		this.age = age;
 	}
-	public Person(String name,int age) {
-		this.name=name;
-		this.age=age;
-		System.out.println("Person(String,int)");
+
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
 	}
-	
+
+	// Method
 	public String getName() {
 		return name;
 	}
@@ -38,9 +39,11 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	public void printInfo() {
-		System.out.println("Person.printInfo() : 이름 : "+this.name+" | 나이 : "+age);
+		System.out.println("\n===== Person =====");
+		System.out.print("이름=" + name);
+		System.out.println(" | 나이=" + age);
 	}
 
 }

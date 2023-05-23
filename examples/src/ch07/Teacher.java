@@ -1,18 +1,20 @@
 package ch07;
 
 
-public class Teacher extends Person{
+public class Teacher extends Person {
 
-	private String lesson; // 과목
+	private String lesson;
 
+	// Constructor
 	public Teacher() {
-		System.out.println("Teacher()");
 	}
-	public Teacher(String name,int age,String lesson) {
-		super(name,age);
-		this.lesson=lesson;
-		System.out.println("Teacher(String,int,String)");
+
+	public Teacher(String name, int age, String lesson) {
+		super(name, age);
+		this.lesson = lesson;
 	}
+
+	// Method
 	public void setLesson(String newLesson) {
 		lesson = newLesson;
 	}
@@ -21,7 +23,12 @@ public class Teacher extends Person{
 		return lesson;
 	}
 
+	@Override
 	public void printInfo() {
-		System.out.println("Teacher.printInfo() : 이름 : "+super.getName()+" | 나이 : "+super.getAge()+" | 과목 : "+lesson);
+		System.out.println("\n===== Teacher =====");
+		System.out.print("이름=" + getName());
+		System.out.print(" | 나이=" + getAge());
+		System.out.println(" | 과목=" + getLesson());
 	}
+
 }
