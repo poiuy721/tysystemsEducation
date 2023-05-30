@@ -13,5 +13,6 @@ public class GenericExample {
 		box2.data=100;
 		int value=box2.data;
 		System.out.println(value);
+		
 	}
 }

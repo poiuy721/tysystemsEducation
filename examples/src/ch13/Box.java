@@ -15,4 +15,7 @@ public class Box<T> {
 	public T getData() {
 		return data;
 	}
+	public boolean compare(Box<T> other) {
+		return data.equals(other.data);
+	}
 }
